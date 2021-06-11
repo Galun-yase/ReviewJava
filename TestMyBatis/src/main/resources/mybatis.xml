@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE configuration
+                PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--从外部和子元素获取属性-->
+    <properties resource="db.properties">
+        <property name="driver" value="com.mysql.jdbc.Driver" />
+    </properties>
+    <!--改变mybatis运行时行为(缓存、懒加载等)-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    
+    <typeHandlers>
+        <typeHandler handler="org.apache.ibatis.type.EnumTypeHandler" />
+    </typeHandlers>
+    
+    <!-- 数据库连接环境的配置 -->
+    <environments default="development">
+            <environment id="development">
+                <transactionManager type="JDBC" />
+                <dataSource type="POOLED">
+                    <property name="driver" value="${driver}"/><!--引用上面的properties-->
+                    <property name="driver" value="com.mysql.jdbc.Driver" />
+                    <property name="url" value="jdbc:mysql://120.55.91.42:3306/fivesix" />
+                    <property name="username" value="root" />
+                    <property name="password" value="cc..2233" />
+                </dataSource>
+            </environment>
+    </environments>
+    <!-- 引入SQL映射文件,Mapper映射文件 -->
+    <mappers>
+        <mapper resource="Mapper/CategoryMapper.xml" />
+    </mappers>
+</configuration>

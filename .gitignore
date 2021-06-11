@@ -1,0 +1,3 @@
+# Project exclude paths
+/TestJDBC/target/
+/TestMyBatis/target/
