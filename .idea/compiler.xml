@@ -7,15 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="TestJDBC" />
-        <module name="TestServlet" />
-        <module name="TestSSM" />
         <module name="TestSpring" />
+        <module name="TestSSM" />
+        <module name="TestServlet" />
         <module name="TestMyBatis" />
+        <module name="TestJDBC" />
+        <module name="TestJava" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="test" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
